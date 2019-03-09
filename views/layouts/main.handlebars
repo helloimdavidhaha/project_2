@@ -5,6 +5,7 @@
   <meta charset="utf-16">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <title>{{title}}</title>
   <link rel="icon" type="image/png" href="/public/images/favicon.ico" />
@@ -17,7 +18,11 @@
   <script src="/socket.io/socket.io.js"></script>
 </head>
 
-<body>
+{{#if mode}}
+<body class="night">
+  {{else}}
+  <body>
+{{/if}}
   <div class="wrapper">
     {{> header}}
     {{{body}}}
@@ -32,6 +37,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
   <script src="/public/js/scripts.js"></script>
   <script src="/public/js/form.js"></script>
+  {{> dark-mode-scripts}}
 </body>
 
 </html>
